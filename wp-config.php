@@ -14,15 +14,42 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
+/**
+* use local config file if present
+*/
+if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
+	include( dirname( __FILE__ ) . '/wp-config-local.php' );
+}
 
-/** MySQL database username */
+/** The name of the database for WordPress. */
+if ( ! defined( 'DB_NAME' ) ) {
+	define('DB_NAME', 'wordpress');
+}
 
-/** MySQL database password */
+/** MySQL database user name. */
+if ( ! defined( 'DB_USER' ) ) {
+	define('DB_USER', 'wordpress');
+}
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+/** MySQL database password. */
+if ( ! defined( 'DB_PASSWORD' ) ) {
+	define('DB_PASSWORD', 'pUJ2xrVmmW');
+}
+
+/** MySQL host name. */
+if ( ! defined( 'DB_HOST' ) ) {
+	define( 'DB_HOST', '127.0.0.1' );
+}
+
+/** WordPress localized language. Defaults to 'en_EN'. */
+if ( ! defined( 'WPLANG' ) ) {
+	define( 'WPLANG', '' );
+}
+
+/** WordPress debugging mode. */
+if ( ! defined( 'WP_DEBUG' ) ) {
+	define( 'WP_DEBUG', false );
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -75,7 +102,4 @@ define('AUTH_SALT',        '/M-/FxO7j3T~+MBdyjs|n2g#olGG>g,E-gvjyQ`s2-P<8T,?-/DS
 define('SECURE_AUTH_SALT', 'O{w>zQ?q|Nyq8]UH|{,ZY`iCM }2}k=i6(j}L5<y]TD=Jfcua?j:,nusRI.[+qA/');
 define('LOGGED_IN_SALT',   'l/Z^%%|q6Yn5U7_-iv*+8Mwg,GKKHYgX%R#i_yg=J[G76W|c<e]ICOkq-2 J<oao');
 define('NONCE_SALT',       'lr$%Opb`K$4uqjx{Yt&5LHTu-%/r_^b`AB{,&e,GXU:EI%8%qSA#h.;;(&qepjT{');
-define('DB_NAME', 'wordpress');
-define('DB_USER', 'wordpress');
-define('DB_PASSWORD', 'pUJ2xrVmmW');
 require_once(ABSPATH . 'wp-settings.php');
