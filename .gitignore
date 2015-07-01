@@ -16,8 +16,8 @@ wp-content/cache/
 wp-content/backups/
 
 # Ignore theme updates
-wp-content/themes/
-!wp-content/themes/acuity
+# wp-content/themes/
+# !wp-content/themes/codeforrva/
 
 # Packages #
 ############
