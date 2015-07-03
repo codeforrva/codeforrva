@@ -1,17 +1,46 @@
 <?php
 
-// set up main nav menu
-function c4rva_register_nav_menu() {
-  register_nav_menu( 'top', __( 'Top Menu', 'c4rva' ));
-}
-add_action( 'after_setup_theme', 'c4rva_register_nav_menu' );
+/***
 
-// add classes to main nav menu items
-function c4rva_nav_menu_css_class($classes, $item) {
-  $classes[] = 'header__list__item';
-  return $classes;
+Primary Functions
+
+For the sake of organization, this file should only include
+require statements for the various types of function files
+that you are going to be using.
+
+***/
+
+// Enqueue Scripts & Stylesheets
+require_once(dirname(__FILE__) . '/functions/queue-scripts.php');
+
+// // Initialize Custom Post Types
+// require_once(dirname(__FILE__) . '/functions/post-types.php');
+//
+// // Initialize Custom Taxonomies
+// require_once(dirname(__FILE__) . '/functions/taxonomies.php');
+//
+// // Enqueue Utility Functions
+// require_once(dirname(__FILE__) . '/functions/utilities/wp-utilities.php');
+// require_once(dirname(__FILE__) .  '/functions/utilities/global-utilities.php');
+//
+// Enqueue Modular Functions
+require_once(dirname(__FILE__) .  '/functions/modules/menus.php');
+
+// register latest news widget
+function c4rva_latest_news_widget_init() {
+  $opts = array(
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h3 class="news__title">',
+    'after_title' => '</h3>'
+  );
+
+  register_sidebar(array_merge($opts, array(
+    'name' => 'Latest News',
+    'id' => 'latest_news'
+  )));
 }
-add_filter( 'nav_menu_css_class', 'c4rva_nav_menu_css_class', 10, 2 );
+add_action( 'widgets_init', 'c4rva_latest_news_widget_init' );
 
 // register triptych widget areas
 function c4rva_triptych_widgets_init() {
@@ -19,8 +48,8 @@ function c4rva_triptych_widgets_init() {
   $opts = array(
     'before_widget' => '',
     'after_widget' => '',
-    'before_title' => '<h2 class="triptych__panel__title">',
-    'after_title' => '</h2>'
+    'before_title' => '<h3 class="triptych__panel__title">',
+    'after_title' => '</h3>'
   );
 
   register_sidebar(array_merge($opts, array(

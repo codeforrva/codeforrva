@@ -1,0 +1,133 @@
+.billboard{
+	@include clearfix;
+	position: relative;
+	width: 100%;
+	height: 575px;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	background: url('../img/billboard_pattern_medium.png') repeat;
+}
+
+.billboard .container{
+	position: relative;
+	height: 100%;
+}
+
+.billboard__text{
+	background: #fff;
+	position: absolute;
+	text-align: center;
+	top: 50px;
+	right: 0;
+	box-sizing: border-box;
+	padding: 2rem;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.95);
+}
+
+.billboard__panel{
+	background: #fff;
+	position: absolute;
+	padding: 2.85rem;
+	box-sizing: border-box;
+}
+
+.mission{
+	width: 25vw;
+	top: 10vh;
+}
+
+.mission__title{
+	margin: 0;
+	@include font('sans', 300, 3rem);
+	color: color(blue);
+}
+
+.mission__statement{
+	@include font('sans', 300, 1.8rem);
+	margin-top: 3rem;
+	color: color(text);
+}
+
+.news{
+	width: 35vw;
+	bottom: 10vh;
+	right: 15px;
+}
+
+.news__title{
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	@include font('sans', 500, 1.6rem);
+	letter-spacing: 1px;
+	color: color(grey-medium);
+}
+
+.news__headline{
+	color: color(red-dark);
+	@include font('sans', 300, 2.35rem);
+}
+
+.news__summary{
+	@include font('sans', 300, 1.75rem);
+}
+
+.next-meetup{
+	top: 10vh;
+	right: 15px;
+}
+
+.next-meetup__title{
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	@include font('sans', 500, 1.6rem);
+	letter-spacing: 1px;
+	color: color(grey-medium);
+}
+
+.next-meetup__date{
+	margin: 0;
+	margin-bottom: 0.5rem;
+	@include font('sans', 400, 1.65rem);
+	color: color(text);
+}
+
+.next-meetup__time{
+	margin: 0;
+	margin-bottom: 0.5rem;
+	@include font('sans', 400, 1.65rem);
+	color: color(grey-dark);
+}
+
+.next-meetup__location{
+	@include font('sans', 400, 1.65rem);
+	margin: 0;
+	color: color(text);
+}
+
+.next-meetup__attendees{
+	@include font('sans', 400, 1.65rem);
+	margin: 0;
+	color: color(text);
+}
+
+.next-meetup__rsvp{
+	display: inline-block;
+	margin-top: 1rem;
+	border: 1px solid color(red-dark);
+	padding: 5px 10px;
+	@include font('sans', 400, 1.45rem);
+	letter-spacing: 1px;
+	&:hover{
+		border-color: color(blue);
+		background-color: color(blue);
+		color: #fff;
+	}
+}
+
+.next-meetup__icon{
+	margin-right: 8px;
+	font-size: 2rem;
+}

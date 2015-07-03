@@ -1,5 +1,5 @@
-<?php 
-global $event; 
+<?php
+global $event;
 $options = get_option('vs_meet_options');
 
 if ( isset( $event->time ) ) {
@@ -11,10 +11,10 @@ if ( isset( $event->time ) ) {
 
 <h3 class="next-meetup__title">Our Next Meetup</h3>
 <?php if ( ! empty( $date ) ): ?>
-<p class="next-meetup__date"><?php echo $date; ?></p>
+<p class="next-meetup__date"><i class="fa fa-calendar next-meetup__icon"></i><?php echo $date; ?></p>
 <?php endif; ?>
-<p class="next-meetup__location"><?php echo (isset($event->venue) ? $event->venue->name : "INM United"); ?></p>
-<p class="next-meetup__attendees"><?php echo absint( $event->yes_rsvp_count ) .' '. _n( 'attendee', 'attendees', $event->yes_rsvp_count ); ?></p>
+<p class="next-meetup__location"><i class="fa fa-map-marker next-meetup__icon"></i><?php echo (isset($event->venue) ? $event->venue->name : "INM United"); ?></p>
+<p class="next-meetup__attendees"><i class="fa fa-user next-meetup__icon"></i><?php echo absint( $event->yes_rsvp_count ) .' '. _n( 'attendee', 'attendees', $event->yes_rsvp_count ); ?></p>
 
 <a class="next-meetup__rsvp"
 <?php

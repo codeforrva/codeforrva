@@ -1,0 +1,22 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin font($type, $weight, $size){
+	@if $type == "sans"{
+		font-family: 'Lato', sans-serif;
+	} @else{
+		font-family: 'Vollkorn', serif;
+	}
+		font-weight: $weight;
+		font-size: $size;
+}
+
+@mixin transition {
+	transition: all 0.35s ease;
+}

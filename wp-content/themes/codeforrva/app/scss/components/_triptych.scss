@@ -1,0 +1,21 @@
+.triptych{
+	padding: 5rem 0;
+}
+
+.triptych__panel{
+
+}
+
+.triptych__panel__title{
+	@include font('sans', 300, 3rem);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-bottom: 3rem;
+	color: color(blue);
+}
+
+.triptych__panel__text,
+.triptych .textwidget{
+	@include font('sans', 300, 1.8rem);
+}

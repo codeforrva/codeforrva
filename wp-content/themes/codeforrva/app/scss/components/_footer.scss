@@ -1,0 +1,40 @@
+.footer{
+	width: 100%;
+	background: color(grey-light);
+	padding: 2.5rem 0;
+}
+
+.footer__logo{
+	width: 80px;
+	float: left;
+}
+
+.footer__nav{
+	float: right;
+	padding-top: 20px;
+}
+
+.footer__nav__item{
+	display: inline-block;
+	margin-right: 10px;
+	@include font('sans', 300, 1.45rem);
+	&:last-child{
+		margin-right: 0;
+	}
+	a{
+		color: color(text);
+		&:hover{
+			color: color(blue);
+		}
+	}
+}
+
+.footer__subtitle{
+	color: color(text);
+	@include font('sans', 300, 1.35rem);
+	padding-top: 34px;
+	display: inline-block;
+	a{
+		color: color(text);
+	}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "codeforrva",
+  "version": "0.0.1",
+  "description": "CodeForRVA wordpress Theme",
+  "main": "app/js/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeforrva/codeforrva"
+  },
+  "author": "Code For RVA",
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.7",
+    "browserify-shim": "~3.5",
+    "gulp": "^3.6.2",
+    "gulp-browserify": "^0.5.0",
+    "gulp-changed": "^0.3.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-notify": "~1.2.4",
+    "gulp-postcss": "^4.0.3",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "^0.3.0"
+  },
+  "dependencies": {
+    "browsernizr": "https://github.com/thejsj/browsernizr/tarball/master",
+    "fastclick": "^1.0.1",
+    "jquery": "https://github.com/jquery/jquery/archive/1.11.1.tar.gz"
+  },
+  "browser": {
+    "jRespond": "./app/bower_components/jrespond/jRespond.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jRespond": {
+      "exports": "jRespond",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeforrva/codeforrva/issues"
+  },
+  "homepage": "https://github.com/codeforrva/codeforrva"
+}

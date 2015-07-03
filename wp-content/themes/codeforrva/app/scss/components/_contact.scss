@@ -1,0 +1,78 @@
+.contact{
+	background: color(grey-light);
+	padding: 5rem 0;
+	position: relative;
+}
+
+#map{
+	background: color(grey-light);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0.6);
+		z-index: 0;
+	}
+}
+
+.contact__info{
+	position: relative;
+	z-index: 5;
+}
+
+.contact__info__title{
+	@include font('sans', 400, 3.2rem);
+	color: color(blue);
+}
+
+.contact__info__text{
+	@include font('sans', 400, 1.85rem);
+}
+
+.contact__form{
+	background: #fff;
+	padding: 3rem;
+	position: relative;
+	z-index: 5;
+	input, textarea{
+		@include font('sans', 400, 1.65rem);
+		border-radius: 0;
+		border: none;
+		border: 2px solid color(grey-light);
+		padding: 20px 10px;
+		outline: none;
+		box-shadow: none;
+		&:focus{
+			outline: none;
+			box-shadow: none;
+			border-color: color(blue);
+		}
+	}
+	textarea{
+		padding: 10px;
+	}
+}
+
+.contact__submit{
+	@include transition;
+	margin-top: 1.75rem;
+	border: 3px solid color(grey-light);
+	@include font('sans', 400, 1.55rem);
+	text-transform: uppercase;
+	color: color(grey-medium);
+	padding: 5px 15px;
+	background: none;
+	&:hover{
+		background: color(blue);
+		border-color: color(blue);
+		color: #fff;
+	}
+}
