@@ -11,6 +11,9 @@ sitemap.xml
 sitemap.xml.gz
 *.log
 
+# wf cache
+wfcache/
+
 # @TODO writable paths
 wp-content/cache/
 wp-content/backups/
