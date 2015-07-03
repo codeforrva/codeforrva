@@ -1,0 +1,22 @@
+.post{
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+.post__title{
+  @include font('sans', 700, 4rem);
+  color: color(blue);
+}
+
+.post__byline{
+  font-size: 1.65rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.post__content p{
+  line-height: 3rem;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
