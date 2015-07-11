@@ -59,4 +59,4 @@ Thumbs.db
 
 # config cache #
 ################
-wp-content/plugins/wordfence/tmp/configCache.php
+wp-content/plugins/wordfence/tmp/
