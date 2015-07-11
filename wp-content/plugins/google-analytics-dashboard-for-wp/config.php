@@ -27,6 +27,7 @@ if (! class_exists('GADWP_Config')) {
         {
             // get plugin options
             $this->get_plugin_options();
+			$this->last_requested_report();
             $this->access = array_map(array(
                 $this,
                 'map'
@@ -36,6 +37,23 @@ if (! class_exists('GADWP_Config')) {
                 'automatic_update'
             ), 10, 2);
         }
+
+        /*
+         * Stores the last requested dimension and metric in cookies
+         */
+		private function last_requested_report(){
+			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) { //Don't store queries while doing ajax
+				return;
+			}
+
+			if ( isset( $_REQUEST['period'] ) ) {
+				GADWP_Tools::set_cookie( 'default_dimension', $_REQUEST['period'] );
+			}
+
+			if ( isset( $_REQUEST['query'] ) ) {
+				GADWP_Tools::set_cookie( 'default_metric', $_REQUEST['query'] );
+			}
+		}
 
         public function get_major_version($version)
         {
@@ -185,7 +203,7 @@ if (! class_exists('GADWP_Config')) {
                 $network_options = (array) json_decode($get_network_options);
                 if (isset($network_options['ga_dash_network']) && ($network_options['ga_dash_network'])) {
                     $network_options = (array) json_decode($get_network_options);
-                    if (! is_network_admin() && ! empty($network_options['ga_dash_profile_list'])) {
+                    if (! is_network_admin() && ! empty($network_options['ga_dash_profile_list']) && isset($network_options['ga_dash_tableid_network']->$blog_id)) {
                         $network_options['ga_dash_profile_list'] = array(
                             0 => GADWP_Tools::get_selected_profile($network_options['ga_dash_profile_list'], $network_options['ga_dash_tableid_network']->$blog_id)
                         );
@@ -199,12 +217,13 @@ if (! class_exists('GADWP_Config')) {
         private function maintain_compatibility()
         {
             $flag = false;
+
             if (GADWP_CURRENT_VERSION != get_option('gadwp_version')) {
                 GADWP_Tools::clear_cache();
                 $flag = true;
-                $this->options['automatic_updates_minorversion'] = 1;
                 delete_transient('ga_dash_lasterror');
                 update_option('gadwp_version', GADWP_CURRENT_VERSION);
+               	update_option('gadwp_got_updated', true);
                 if (is_multisite()) { // Cleanup errors on the entire network
                     foreach (wp_get_sites(array(
                         'limit' => apply_filters('gadwp_sites_limit', 100)
@@ -308,6 +327,14 @@ if (! class_exists('GADWP_Config')) {
             if (! isset($this->options['backend_item_reports'])) { //v4.8
                 $this->options['backend_item_reports'] = 1;
                 $flag = true;
+            }
+            if ( isset($this->options['ga_dash_default_metric'])) { //v4.8.1
+            	unset($this->options['ga_dash_default_metric']);
+            	$flag = true;
+            }
+            if ( isset($this->options['ga_dash_default_dimension'])) { //v4.8.1
+            	unset($this->options['ga_dash_default_dimension']);
+            	$flag = true;
             }
             if (isset($this->options['item_reports'])) { //v4.8
             	$this->options['backend_item_reports'] = $this->options['item_reports'];
