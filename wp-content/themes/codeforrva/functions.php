@@ -25,6 +25,7 @@ require_once(dirname(__FILE__) . '/functions/queue-scripts.php');
 //
 // Enqueue Modular Functions
 require_once(dirname(__FILE__) .  '/functions/modules/menus.php');
+require_once(dirname(__FILE__) .  '/functions/modules/latest_news.php');
 
 // register latest news widget
 function c4rva_latest_news_widget_init() {
