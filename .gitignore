@@ -56,3 +56,7 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# config cache #
+################
+wp-content/plugins/wordfence/tmp/configCache.php
