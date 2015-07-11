@@ -42,7 +42,9 @@
 	padding: 3rem;
 	position: relative;
 	z-index: 5;
-	input, textarea{
+	input[type='text'],
+	input[type='email'],
+	textarea{
 		@include font('sans', 400, 1.65rem);
 		border-radius: 0;
 		border: none;
