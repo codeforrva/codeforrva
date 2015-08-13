@@ -1,11 +1,11 @@
 // Colors
 $colors: (
 	blue: #536271,
-	red: #D5394F,
+	red: #8A211A,
 	red-dark: #901B1A,
-	green: #ADC9C3,
+	green: #4DA38D,
 	text: #545454,
-	grey-light: #e5e5e5,
+	grey-light: #DCDDD6,
 	grey-medium: #999595,
 	grey-dark: #444444
 );
@@ -14,10 +14,11 @@ $colors: (
 a{
 	@include transition;
 	text-decoration: none;
-	color: color(red-dark);
+	color: color(green);
 	&:hover{
 		text-decoration: none;
-		color: color(blue);
+		border-bottom: 1px solid color(green);
+		color: color(green);
 	}
 }
 

@@ -19,10 +19,10 @@
  	}
  	a{
 		@include transition;
- 		color: color(blue);
+ 		color: color(text);
  		padding-bottom: 2px;
  		&:hover{
- 			border-bottom: 2px solid color(blue);
+ 			border-bottom: 2px solid color(green);
  		}
  	}
 }
