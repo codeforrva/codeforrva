@@ -16,7 +16,6 @@
 	<div class="container">
 		<img class="footer__logo" src="<?php echo get_stylesheet_directory_uri() . "/dist/img/logo.png"; ?>"><span class="footer__subtitle">a <a href="#">Code For America</a> Brigade</span>
 		<ul class="footer__nav">
-			<li class="footer__nav__item"><a href="#">Code of Conduct</a></li>
 			<li class="footer__nav__item"><a href="#">Code For America</a></li>
 			<li class="footer__nav__item"><a href="#">Open Data Portal</a></li>
 			<li class="footer__nav__item"><a class="social-button" href="https://twitter.com/codeforrva" target="_blank"><i class="fa fa-twitter"></i></a></li>
