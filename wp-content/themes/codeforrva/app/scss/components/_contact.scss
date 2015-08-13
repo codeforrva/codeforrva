@@ -29,8 +29,8 @@
 }
 
 .contact__info__title{
-	@include font('sans', 400, 3.2rem);
-	color: color(grey-medium);
+	@include font('sans', 300, 3.2rem);
+	color: color(green);
 }
 
 .contact__info__text{

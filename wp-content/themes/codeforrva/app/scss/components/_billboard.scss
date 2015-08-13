@@ -114,17 +114,7 @@
 }
 
 .next-meetup__rsvp{
-	display: inline-block;
-	margin-top: 1rem;
-	border: 1px solid color(green);
-	padding: 5px 10px;
-	@include font('sans', 400, 1.45rem);
-	letter-spacing: 1px;
-	&:hover{
-		border-color: color(green);
-		background-color: color(green);
-		color: #fff;
-	}
+		margin-bottom: 0;
 }
 
 .next-meetup__icon{

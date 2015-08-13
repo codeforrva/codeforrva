@@ -1,0 +1,14 @@
+.button{
+  @include font('sans', 700, 1.25rem);
+  text-transform: uppercase;
+  border: 2px solid color(green);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  display: inline-block;
+  &:hover{
+    background-color: color(green);
+    color: #fff;
+  }
+}

@@ -100,3 +100,4 @@ wp-content/themes/twenty*/
 node_modules/
 
 wp-content/plugins/wordfence/tmp/
+wp-config.php

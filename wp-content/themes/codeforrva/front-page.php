@@ -3,8 +3,9 @@
 	<section class="billboard">
 		<div class="container">
 			<div class="billboard__panel mission">
-				<h1 class="mission__title">We use technology to solve social problems.</h1>
-				<p class="mission__statement">We are Code for RVA, a Code for America Brigade. We develop partnerships with municipal and community partners in order to collaborate together to better understand where we can make an impact in our community.</p>
+				<h1 class="mission__title">We solve problems through data and technology.</h1>
+				<p class="mission__statement">We are Code for RVA, a Code for America Brigade. We develop partnerships with municpal leaders, nonprofits, schools, and community members to better understand and serve our city.</p>
+				<a class="button -clear" href="#map">Work with us.</a>
 			</div>
 			<?php if(!empty($latest)):?>
 			<div class="billboard__panel news">
@@ -31,4 +32,20 @@
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript">
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+		});
+	</script>
 <?php get_footer(); ?>

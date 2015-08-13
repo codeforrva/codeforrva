@@ -16,7 +16,7 @@ if ( isset( $event->time ) ) {
 <p class="next-meetup__location"><i class="fa fa-map-marker next-meetup__icon"></i><?php echo (isset($event->venue) ? $event->venue->name : "INM United"); ?></p>
 <p class="next-meetup__attendees"><i class="fa fa-user next-meetup__icon"></i><?php echo absint( $event->yes_rsvp_count ) .' '. _n( 'attendee', 'attendees', $event->yes_rsvp_count ); ?></p>
 
-<a class="next-meetup__rsvp"
+<a class="button next-meetup__rsvp"
 <?php
 // OAuth doesn't seem to be quite working, just display a normal link for now
 if ( false && !empty($options['vs_meetup_key']) && !empty($options['vs_meetup_secret']) && class_exists('OAuth')) {
