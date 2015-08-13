@@ -40,7 +40,7 @@
 .mission__title{
 	margin: 0;
 	@include font('sans', 300, 3rem);
-	color: color(blue);
+	color: color(green);
 }
 
 .mission__statement{
@@ -65,7 +65,7 @@
 }
 
 .news__headline{
-	color: color(red-dark);
+	color: color(green);
 	@include font('sans', 300, 2.35rem);
 }
 
@@ -116,13 +116,13 @@
 .next-meetup__rsvp{
 	display: inline-block;
 	margin-top: 1rem;
-	border: 1px solid color(red-dark);
+	border: 1px solid color(green);
 	padding: 5px 10px;
 	@include font('sans', 400, 1.45rem);
 	letter-spacing: 1px;
 	&:hover{
-		border-color: color(blue);
-		background-color: color(blue);
+		border-color: color(green);
+		background-color: color(green);
 		color: #fff;
 	}
 }

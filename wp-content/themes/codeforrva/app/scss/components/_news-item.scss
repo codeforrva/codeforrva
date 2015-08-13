@@ -8,4 +8,7 @@
 
 .news-item__title{
   @include font('sans', 700, 3rem);
+  a:hover{
+    border-bottom: 2px solid color(green);
+  }
 }
