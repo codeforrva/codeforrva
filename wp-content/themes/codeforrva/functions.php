@@ -112,8 +112,8 @@ function c4rva_show_widget_area( $id ) {
 function c4rva_show_page() {
   while (have_posts()) : the_post();
   ?>
-  <article>
-    <header>
+  <article class="page container">
+    <header class="col-md-12">
       <?php the_title('<h1>', '</h1>'); ?>
     </header>
     <div>
