@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-6 contact__info">
 				<h2 class="contact__info__title">Let's solve a problem.</h2>
-				<p class="contact__info__text">We want to hear from whether you have a specific need, need help formulating a problem, or simply have data that could benefit Richmond citizens.</p>
+				<p class="contact__info__text">We want to hear from you whether you have a specific need, need help formulating a problem, or simply have data that could benefit Richmond citizens.</p>
 			</div>
 			<div class="col-md-5 col-md-offset-1 contact__form">
 				<?php echo do_shortcode( '[contact-form-7 id="26" title="Footer Contact Form"]' ); ?>
