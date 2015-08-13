@@ -30,7 +30,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<header class="header">
+	<header class="header<?php if(is_user_logged_in()) echo ' -is-admin'; ?> ">
 		<div class="container">
 			<a href="/"><img class="header__logo" src="/wp-content/themes/codeforrva/img/logo.png"></a>
 			<?php c4rva_nav_menu(); ?>

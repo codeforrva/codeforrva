@@ -2,11 +2,22 @@
 	@include clearfix;
 	position: relative;
 	width: 100%;
-	height: 575px;
+	height: 650px;
 	padding: 0;
 	margin: 0;
 	overflow-x: hidden;
-	background: url('../img/billboard_pattern_medium.png') repeat;
+	background: url('../img/pattern-cool.png') center center no-repeat;
+	background-size: cover;
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		top:0;
+		left: 0;
+		background: rgba(255,255,255,0.25);
+		z-index: 5;
+		position: absolute;
+	}
 }
 
 .billboard .container{
@@ -30,11 +41,12 @@
 	position: absolute;
 	padding: 2.85rem;
 	box-sizing: border-box;
+	z-index: 10;
 }
 
 .mission{
 	width: 25vw;
-	top: 10vh;
+	bottom: 10vh;
 }
 
 .mission__title{
@@ -74,7 +86,7 @@
 }
 
 .next-meetup{
-	top: 10vh;
+	top: 15vh;
 	right: 15px;
 }
 

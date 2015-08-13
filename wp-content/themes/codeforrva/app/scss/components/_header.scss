@@ -4,8 +4,17 @@
 }
 
 .header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 10;
 	@include clearfix;
 	padding: 1rem 0;
+	&.-is-admin{
+		top: 2rem;
+	}
 }
 
 .header__list__item {
