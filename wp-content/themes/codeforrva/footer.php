@@ -19,6 +19,7 @@
 			<li class="footer__nav__item"><a href="#">Code of Conduct</a></li>
 			<li class="footer__nav__item"><a href="#">Code For America</a></li>
 			<li class="footer__nav__item"><a href="#">Open Data Portal</a></li>
+			<li class="footer__nav__item"><a class="social-button" href="https://twitter.com/codeforrva" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		</ul>
 	</div>
 </footer>
