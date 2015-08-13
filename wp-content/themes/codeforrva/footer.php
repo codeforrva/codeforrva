@@ -33,7 +33,7 @@
 		var map = L.mapbox.map('map', 'codeforrva.mfoko7ik', {
 			zoomControl: false,
 		}).setView([37.538, -77.43], 14);
-		map.dragging.enable();
+		map.dragging.disable();
 		map.scrollWheelZoom.disable()
 	</script>
 <?php wp_footer(); ?>

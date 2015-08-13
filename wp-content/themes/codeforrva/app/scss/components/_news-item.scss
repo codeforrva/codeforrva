@@ -1,0 +1,11 @@
+.news-items{
+  margin-top: 5rem;
+}
+
+.news-item{
+  margin-bottom: 2rem;
+}
+
+.news-item__title{
+  @include font('sans', 700, 3rem);
+}
