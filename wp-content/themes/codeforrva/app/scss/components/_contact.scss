@@ -66,7 +66,7 @@
 .contact__submit{
 	@include transition;
 	margin-top: 1.75rem;
-	border: 2px solid color(grey-medium);
+	border: 3px solid color(grey-medium);
 	@include font('sans', 400, 1.55rem);
 	text-transform: uppercase;
 	color: color(grey-medium);
